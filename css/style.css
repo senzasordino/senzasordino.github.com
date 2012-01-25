@@ -635,6 +635,11 @@ cite {
   font-style: italic;
 }
 
+/* line 136, /Users/jason/github/senzasordino.github.com/senzasordino.github.com/sass/partials/_page.scss */
+span.email span {
+  display: none;
+}
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print {
