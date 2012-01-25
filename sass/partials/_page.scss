@@ -8,23 +8,12 @@
 body, select, input, textarea {
   color: $font-color;
   // Set your base font here, to apply evenly
-  font-family: sans-serif;
-font-size: 13px;
-}
-
-//Headers (h1, h2, etc) have no default font-size or margin; define those yourself
-h1, h2, h3, h4, h5, h6 {
-  // Bold might not be the best choice if you are
-  // embedding a @font-face that's already bold
-  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 15px;
 }
 
 a, a:active, a:visited { color: $link-color; }
-a:hover { color: $link-hover-color; }
-
-strong, th {
-  font-weight: bold;
-}
+a:hover, a:focus { color: $link-hover-color; text-decoration:underline; }
 
 small {
   // Use font-size mixin to convert to percentage for YUI
@@ -32,13 +21,6 @@ small {
   @include font-size(11px);  // approx 85% when base-font-size eq 13px
 }
 
-// Add the 'required' attribute on your
-// inputs if you want to use these
-input:valid, textarea:valid {}
-input:invalid, textarea:invalid {
-  @include border-radius(1px);
-  @include single-box-shadow(red, 0, 0, 5px, 0);
-}
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
@@ -47,12 +29,106 @@ input:invalid, textarea:invalid {
 // Add your own custom styles below
 //-----------------------------------
 
-body {}
+body {
+background:#fff;
+font-weight: 200;
+position:relative;
+}
 
 #container {}
 
-header {}
+header {padding-top:25px; border-bottom:1px dashed #ccc; padding-bottom:20px; }
+header .logo {font-family: lato; font-style: italic; font-weight: 300; font-size:2.52em;}
+header .subhead {font-family: lato; font-style: italic; font-weight: 300; font-size: 1.52em; line-height: 1.25em;}
+header nav ul li {float:right; margin-top:12px;}
+header nav ul li a {display:block; padding:5px 15px; border-right:1px solid #eee; font-family: lato; font-size:0.9em; font-weight: 300; text-decoration:none;}
+header nav ul li a:hover {background-color:#eee; border-right:1px solid #ccc; text-shadow:-1px -1px 0px #fff;}
+header nav ul li.last a {border-right:none;}
+
+h2 {border-bottom:1px dashed #ccc; margin-top:15px;}
+
+article {padding-top: 10px; line-height: 1.1em;}
+
+footer {text-align:center; color:#666; font-size:0.9em; padding:4px 0px; line-height: 1.25em;}
+
+.top_right { float:right; margin-left: 10px; margin-bottom: 10px; }
+.top_left { float:left; margin-right: 10px; margin-bottom: 10px; }
 
 #main {}
 
-footer {}
+.left, .float_left  { float:left; }
+.right, .float_right { float:right; }
+.clear { clear:both; display:block; overflow:hidden; visibility:hidden; height:0px;}
+.clear-left, .clear_left { clear:left; } .clear-right, .clear_right { clear:right; }
+.hide  { display:none	} .block {display:block !important;} .inline {display:inline !important;}
+
+.align_right    { text-align:right;	  }
+.align_left     { text-align:left;	  }
+.align_center   { text-align:center;  }
+.align_justify  { text-align:justify; }
+
+.bold {font-weight:600;}
+.italic {font-style:italic;}
+
+a {	color:#525252;	}
+a:hover, a:focus { text-decoration:underline;}
+a:active, a:visited { }
+
+blockquote {
+		font-family: Georgia,"Times New Roman", Times, serif; 
+		margin:5px; 
+		padding:10px;
+		font-size:1.52em; 
+		color:#999; 
+		font-style:italic; 
+		line-height:1.3em; 
+		width:100%; 
+		quotes:none;
+	}
+	blockquote.left {border-right:1px dashed #ccc; width:35%;} /* float blockquote left, and set width */
+	blockquote.right {border-left:1px dashed #ccc; width:35%;} /* float blockquote right and set a width */
+
+h1, h2, h3, h4, h5 {margin:0 0 0.5em; line-height:1.1em;}
+h1 {	font-size:2.52em;} 
+h2 {	font-size:1.952em;} 
+h3 {	font-size:1.652em;} 
+h4 {	font-size:1.452em;} 
+h5 {	font-size:1.252em;} 
+h6 {	font-size:1.52em;}
+
+ul{
+  list-style:outside square;
+}
+ul,ol{
+  margin:0 0 1.5em 1.5em;
+  padding:0;
+}
+li ul,li ol{
+  padding:0;
+  margin:0 0 1.5em 1.5em;
+}
+
+
+::selection {
+	background: #525252; /* Safari */
+	}
+::-moz-selection {
+	background: #525252; /* Firefox */
+	color:#fff;
+}
+
+p {margin:0 0 1.52em;}
+	p img.left {float:left;margin:1.25em 1.25em 1.25em 0;padding:0;}
+	p img.right {float:right;margin:1.25em 0 1.25em 1.25em;}
+
+strong   		{	font-weight:600;}
+em, dfn  		{	font-style:italic;}
+dfn 	 		{   font-weight:600;}
+sup, sub 		{   line-height:0;}
+abbr, acronym   {	border-bottom:1px dashed #ccc;}
+address 		{	margin:0 0 1.5em;font-style:italic;}
+del 			{	color:#666;}
+pre, code, tt   {	font:1em 'andale mono', 'lucida console', monospace;line-height:1.5; display:block;}
+code 			{	background-color:#eee; display:inline; padding:0px 2px 1px 2px; line-height:1.1em;}
+pre 			{	margin:1.5em 0;white-space:pre;}
+cite { font-size: 0.75em; font-style: italic; }
