@@ -640,6 +640,18 @@ span.email span {
   display: none;
 }
 
+@media screen and (max-width: 320px) {
+  /* line 9, /Users/jason/github/senzasordino.github.com/senzasordino.github.com/sass/partials/_media.scss */
+  header nav ul li a {
+    display: block;
+    padding: 3px 6px;
+    border-right: 1px solid #eee;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+  }
+}
+/*/mediaquery*/
 /*/mediaquery*/
 /*/mediaquery*/
 @media print {

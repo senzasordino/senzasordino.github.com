@@ -4,6 +4,11 @@
 // The closing /mediaquery comment is required by respond.js min/max-width Media Query polyfill
 //
 
+@media screen and (max-width: 320px)
+{
+	header nav ul li a {display:block; padding:3px 6px; border-right:1px solid #eee; font-size:12px; font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; text-decoration:none;}
+}/*/mediaquery*/
+
 @media only screen and (min-width: 480px) {
   // Style adjustments for viewports 480px and over go here
   
